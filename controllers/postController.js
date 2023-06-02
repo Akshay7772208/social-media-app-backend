@@ -134,7 +134,7 @@ const deletePost= async (req,res)=>{
 
 module.exports={
 	// getAllPostsController, 
-	createPostController,
+//createPostController,
 	likeAndUnlikePost,
 	updatePostController,
 	deletePost
