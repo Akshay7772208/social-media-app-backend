@@ -1,7 +1,7 @@
 const Post=require("../models/Post")
 const User=require('../models/User')
 const {error,success} =require('../utils/responseWrapper')
-const cloudinary=require('cloudinary').v2
+//const cloudinary=require('cloudinary').v2
 const {mapPostOutput}=require('../utils/Utils')
 // const getAllPostsController=async (req,res)=>{
 // 	console.log(req._id)
