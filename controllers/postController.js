@@ -10,7 +10,7 @@ const {mapPostOutput}=require('../utils/Utils')
 // 	return res.send(success(200,'These are all the posts'))
 // }
 
-const createPostController=async (req,res)=>{
+/*const createPostController=async (req,res)=>{
 	
 	try{
 		const {caption,postImg}=req.body;
@@ -44,7 +44,7 @@ const createPostController=async (req,res)=>{
 		res.send(error(500,e.message))
 	}
 
-}
+}*/
 
 const likeAndUnlikePost=async (req,res)=>{
 	
