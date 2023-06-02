@@ -1,7 +1,7 @@
 const Post=require("../models/Post")
 const User=require('../models/User')
 const {error,success} =require('../utils/responseWrapper')
-const cloudinary=require('cloudinary');
+//const cloudinary=require('cloudinary');
 const {mapPostOutput}=require('../utils/Utils')
 const mongoose=require('mongoose')
 
@@ -169,7 +169,7 @@ const getMyInfo= async(req,res)=>{
 		return res.send(error(500,e.message))
 	}
 }
-
+/*
 const updateUserProfile= async (req,res)=>{
 	try{
 		const {bio,name,userImg}=req.body
@@ -197,7 +197,7 @@ const updateUserProfile= async (req,res)=>{
 		return res.send(error(500,e.message))
 	}
 }
-
+*/
 const getUserProfile=async (req,res)=>{
 	try{
 		const userId=req.body.userId
@@ -229,7 +229,7 @@ module.exports={
 	getUserPosts,
 	deleteMyProfile,  
 	getMyInfo,
-	updateUserProfile,
+//updateUserProfile,
 	getUserProfile,
 	getPostsOfFollowing
 }
