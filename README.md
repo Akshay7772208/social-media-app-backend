@@ -1,1 +1,1 @@
-# social-media-backend-mern app
+# social-media-mern-app-backend
