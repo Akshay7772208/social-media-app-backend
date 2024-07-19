@@ -1,7 +1,8 @@
 const mongoose=require('mongoose')
 
 module.exports= async ()=>{
-	const mongoUrl='mongodb+srv://akshay:z3saVVzEsaBxyagU@cluster0.s5njwee.mongodb.net/?retryWrites=true&w=majority'
+	//const mongoUrl='mongodb+srv://akshay:z3saVVzEsaBxyagU@cluster0.s5njwee.mongodb.net/?retryWrites=true&w=majority'
+	const mongoUrl=process.env.MONGO_URL
 	
 	try{
 		const connect=await mongoose.connect(mongoUrl,{
