@@ -8,19 +8,19 @@ const postRouter=require('./routers/postRouter')
 const userRouter=require('./routers/userRouter')
 const cookieParser=require('cookie-parser')
 const cors=require('cors')
-//const cloudinary = require('cloudinary').v2;
+const cloudinary = require('cloudinary').v2;
 
-//const bodyParser=require('body-parser')
+const bodyParser=require('body-parser')
 
 dotenv.config('./.env')
 
 // Configuration 
-/*cloudinary.config({
+cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
   api_key: process.env.CLOUDINARY_API_KEY,
   api_secret: process.env.CLOUDINARY_API_SECRET
 });
-*/
+
 
 const app=express()
 
@@ -28,16 +28,12 @@ const app=express()
 app.use(express.json({limit:'10mb'}))
 app.use(morgan('common'))
 app.use(cookieParser())
-app.use(cors({
-	credentials: true,
-	//origin: 'http://localhost:3000'
-	origin: 'https://ill-jade-cocoon-cuff.cyclic.app'
-	})
+app.use(cors()
 )
-// app.use(
-// 	express.urlencoded({extended: true})
-// )
-//app.use(bodyParser.urlencoded({extended: true}))
+app.use(
+	express.urlencoded({extended: true})
+)
+app.use(bodyParser.urlencoded({extended: true}))
 
 app.use('/auth',authRouter)
 app.use('/posts',postRouter)
