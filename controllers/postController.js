@@ -1,16 +1,16 @@
 const Post=require("../models/Post")
 const User=require('../models/User')
 const {error,success} =require('../utils/responseWrapper')
-//const cloudinary=require('cloudinary').v2
+const cloudinary=require('cloudinary').v2
 const {mapPostOutput}=require('../utils/Utils')
-// const getAllPostsController=async (req,res)=>{
-// 	console.log(req._id)
-// 	//console.log(req.email)
-// 	//return res.send('These are all the posts')
-// 	return res.send(success(200,'These are all the posts'))
-// }
+const getAllPostsController=async (req,res)=>{
+	console.log(req._id)
+	//console.log(req.email)
+	//return res.send('These are all the posts')
+	return res.send(success(200,'These are all the posts'))
+}
 
-/*const createPostController=async (req,res)=>{
+const createPostController=async (req,res)=>{
 	
 	try{
 		const {caption,postImg}=req.body;
@@ -44,7 +44,7 @@ const {mapPostOutput}=require('../utils/Utils')
 		res.send(error(500,e.message))
 	}
 
-}*/
+}
 
 const likeAndUnlikePost=async (req,res)=>{
 	
@@ -133,8 +133,8 @@ const deletePost= async (req,res)=>{
 }
 
 module.exports={
-	// getAllPostsController, 
-//createPostController,
+	 getAllPostsController, 
+createPostController,
 	likeAndUnlikePost,
 	updatePostController,
 	deletePost
