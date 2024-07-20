@@ -9,7 +9,7 @@ router.get('/getMyPosts',requireUser,UserController.getMyPosts)
 router.get('/getUserPosts',requireUser,UserController.getUserPosts)
 router.delete('/',requireUser,UserController.deleteMyProfile)
 
-//router.put('/',requireUser,UserController.updateUserProfile)
+router.put('/',requireUser,UserController.updateUserProfile)
 router.get('/getMyInfo',requireUser,UserController.getMyInfo)
 router.post('/getUserProfile',requireUser,UserController.getUserProfile)
 router.get('/getFeedData',requireUser,UserController.getPostsOfFollowing)
